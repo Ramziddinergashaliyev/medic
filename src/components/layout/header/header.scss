@@ -1,0 +1,81 @@
+.header__top {
+  background: linear-gradient(270deg, #2fa365 0%, #15545c 100%);
+  &__title {
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    font-family: Clear Sans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 13.64px;
+  }
+}
+
+.header {
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 10px 0px;
+  }
+
+  &__menu {
+    &__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      border-bottom: 1px solid #aaa4;
+      padding-bottom: 10px;
+      &-item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 20.7px;
+        text-align: left;
+        span {
+          color: #2fa365;
+        }
+      }
+
+      &-watch {
+        padding-right: 120px;
+      }
+
+      select {
+        padding: 6px 12px;
+        outline: none;
+        border: 1px solid #aaa4;
+        border-radius: 5px;
+      }
+    }
+
+    &__bottom {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      justify-content: space-between;
+      padding-top: 10px;
+    }
+
+    &__bottom-item {
+      font-family: Clear Sans;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      line-height: 15.92px;
+      text-align: left;
+      color: rgba(0, 0, 0, 1);
+    }
+  }
+
+  &__logo__bottom {
+    svg {
+      font-size: 40px;
+      color: #2fa365;
+    }
+  }
+}
