@@ -1,0 +1,52 @@
+.footer {
+  background: linear-gradient(270deg, #2fa365 0%, #15545c 100%);
+  margin-top: 30px;
+  padding-top: 50px;
+
+  &__card {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    justify-content: space-between;
+  }
+
+  &__item {
+    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20.47px;
+    text-align: left;
+  }
+
+  &__bottom {
+    padding-top: 50px;
+    padding-bottom: 10px;
+    p {
+      font-family: Clear Sans;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 13.64px;
+      text-align: center;
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  @media (max-width: 800px) {
+    &__list {
+      gap: 20px;
+    }
+    &__item {
+      width: 100px;
+    }
+  }
+}

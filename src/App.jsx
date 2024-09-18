@@ -1,14 +1,15 @@
-import React from "react";
+import React, { lazy } from "react";
 import { Routes, Route, Router } from "react-router-dom";
-import Home from "./pages/home/Home";
-import Catolog from "./pages/catolog/Catolog";
-import Warranty from "./pages/warranty/Warranty";
-import Feedback from "./pages/feedback/Feedback";
-import Sale from "./pages/sale/Sale";
-import Contact from "./pages/contact/Contact";
-import About from "./pages/about/About";
-import Article from "./pages/all-article/Article";
-import Layout from "./components/layout/Layout";
+const Home = lazy(() => import("./pages/home/Home"));
+const Catolog = lazy(() => import("./pages/catolog/Catolog"));
+const Warranty = lazy(() => import("./pages/warranty/Warranty"));
+const Feedback = lazy(() => import("./pages/feedback/Feedback"));
+const Sale = lazy(() => import("./pages/sale/Sale"));
+const Contact = lazy(() => import("./pages/contact/Contact"));
+const About = lazy(() => import("./pages/about/About"));
+const Article = lazy(() => import("./pages/all-article/Article"));
+const Layout = lazy(() => import("./components/layout/Layout"));
+const Detail = lazy(() => import("./pages/detail/Detail"));
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="contact" element={<Contact />} />
           <Route path="about" element={<About />} />
           <Route path="article" element={<Article />} />
+          <Route path="/single/:id" element={<Detail />} />
         </Route>
       </Routes>
     </>

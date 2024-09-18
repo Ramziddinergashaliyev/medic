@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import img from "../../../assets/logo.png";
 import { FaShoppingBasket } from "react-icons/fa";
 import { MdLocalPhone } from "react-icons/md";
 import { MdOutlineWatchLater } from "react-icons/md";
 import { NavLink } from "react-router-dom";
+import { LuMenu } from "react-icons/lu";
 
+import { IoMdClose } from "react-icons/io";
 import "./header.scss";
 
 const Header = () => {
+  const [show, setShow] = useState(false);
+
   return (
     <>
       <div className="header__top">
@@ -37,35 +41,54 @@ const Header = () => {
                 <option value="Rus">Rus</option>
               </select>
             </ul>
-            <ul className="header__menu__bottom">
-              <NavLink to={"/"} className="header__menu__bottom-item">
+            <ul
+              className={`header__menu__bottom ${
+                show ? "header__menu__botttom-hide" : ""
+              }`}
+            >
+              <NavLink to={"/catolog"} className="header__menu__bottom-item">
                 Каталог
               </NavLink>
-              <NavLink to={"/"} className="header__menu__bottom-item">
+              <NavLink to={"/warranty"} className="header__menu__bottom-item">
                 Гарантия
               </NavLink>
               <NavLink to={"/"} className="header__menu__bottom-item">
                 Оплата и доставка
               </NavLink>
-              <NavLink to={"/"} className="header__menu__bottom-item">
+              <NavLink to={"/feedback"} className="header__menu__bottom-item">
                 Отзывы
               </NavLink>
-              <NavLink to={"/"} className="header__menu__bottom-item">
+              <NavLink to={"/sale"} className="header__menu__bottom-item">
                 Акции 2
               </NavLink>
-              <NavLink to={"/"} className="header__menu__bottom-item">
+              <NavLink to={"/article"} className="header__menu__bottom-item">
                 статьи
               </NavLink>
-              <NavLink to={"/"} className="header__menu__bottom-item">
+              <NavLink to={"/about"} className="header__menu__bottom-item">
                 О нас{" "}
               </NavLink>
-              <NavLink to={"/"} className="header__menu__bottom-item">
+              <NavLink to={"/contact"} className="header__menu__bottom-item">
                 Контакты
               </NavLink>
             </ul>
           </div>
           <div className="header__logo__bottom">
             <FaShoppingBasket />
+            {show ? (
+              <button
+                onClick={() => setShow(false)}
+                className="header__menu__bottom-btn"
+              >
+                <IoMdClose />
+              </button>
+            ) : (
+              <button
+                onClick={() => setShow(true)}
+                className="header__logo__bottom-menu"
+              >
+                <LuMenu />
+              </button>
+            )}
           </div>
         </nav>
       </header>

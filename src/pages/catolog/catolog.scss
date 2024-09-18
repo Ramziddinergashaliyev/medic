@@ -1,0 +1,219 @@
+.catolog {
+  background-color: white;
+  padding: 20px 0px;
+  &__title {
+    font-family: Clear Sans;
+    font-size: 39px;
+    font-weight: 700;
+    line-height: 40.05px;
+    text-align: center;
+    color: rgba(0, 127, 0, 1);
+    padding: 10px 0px 20px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    &__link-item {
+      font-family: Clear Sans;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24.34px;
+      text-align: center;
+      color: rgba(243, 118, 27, 1);
+      display: flex;
+      justify-content: center;
+      padding-top: 15px;
+      align-items: center;
+    }
+  }
+
+  &__card {
+    border: 1px solid #aaa4;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+  }
+
+  &__card__info {
+    &-title {
+      font-family: Clear Sans;
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 23.88px;
+      text-align: left;
+      color: rgba(34, 34, 34, 1);
+      padding: 10px 0px;
+    }
+
+    &-text {
+      display: -webkit-box;
+      line-clamp: 3;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      color: rgba(34, 34, 34, 1);
+      font-family: Clear Sans;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18.93px;
+      text-align: left;
+    }
+
+    &-link {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding-top: 10px;
+      p {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: FontAwesome;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 20.7px;
+        text-align: left;
+        color: rgba(0, 127, 0, 1);
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__card__img {
+    img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+    }
+  }
+
+  @media (max-width: 1150px) {
+    &__cards {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    &__cards {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__card__img {
+      img {
+        width: 120px;
+        height: 150px;
+        object-fit: cover;
+      }
+    }
+
+    &__card__info-title {
+      font-size: 16px;
+    }
+
+    &__card__info-text {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    &__card {
+      flex-direction: column;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__card__img {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.catolog__top {
+  &__title {
+    font-family: Clear Sans;
+    font-size: 39px;
+    font-weight: 700;
+    line-height: 40.05px;
+    text-align: left;
+    color: rgba(0, 127, 0, 1);
+    padding: 20px 0px 10px;
+  }
+
+  &__select {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    h2 {
+      font-family: Clear Sans;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 20.47px;
+      text-align: left;
+      color: rgba(0, 0, 0, 1);
+    }
+
+    select {
+      padding: 8px 30px;
+      width: 200px;
+      background-color: transparent;
+      border: 1px solid #aaa6;
+      border-radius: 3px;
+      outline: none;
+    }
+  }
+}
+
+.catolog__info {
+  &__title {
+    font-family: Clear Sans;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40.56px;
+    text-align: left;
+    color: rgba(34, 34, 34, 1);
+    padding: 10px 0px 20px;
+  }
+
+  &__text {
+    font-family: Clear Sans;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40.56px;
+    text-align: left;
+    color: rgba(34, 34, 34, 1);
+  }
+
+  &__desc {
+    font-family: Clear Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22.93px;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+    padding: 5px 0px;
+  }
+
+  @media (max-width: 600px) {
+    &__title {
+      font-size: 24px;
+    }
+
+    &__text {
+      font-size: 20px;
+    }
+
+    &__desc {
+      font-size: 16px;
+      display: -webkit-box;
+      line-clamp: 6;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 6;
+      overflow: hidden;
+    }
+  }
+}

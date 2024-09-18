@@ -1,5 +1,9 @@
 .header__top {
   background: linear-gradient(270deg, #2fa365 0%, #15545c 100%);
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 22;
   &__title {
     text-align: center;
     padding: 10px;
@@ -12,12 +16,17 @@
 }
 
 .header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  padding: 10px 0px;
+  background-color: white;
   &__nav {
     display: flex;
     align-items: center;
     gap: 10px;
     justify-content: space-between;
-    padding: 10px 0px;
   }
 
   &__menu {
@@ -70,12 +79,86 @@
       text-align: left;
       color: rgba(0, 0, 0, 1);
     }
+    .active {
+      color: rgba(243, 118, 27, 1);
+    }
   }
 
   &__logo__bottom {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     svg {
       font-size: 40px;
       color: #2fa365;
+    }
+  }
+
+  &__logo__bottom-menu {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    display: none;
+  }
+
+  &__menu__bottom-btn {
+    display: flex;
+    align-items: center;
+    border: none;
+    font-size: 26px;
+    color: red;
+    background-color: transparent;
+  }
+
+  @media (max-width: 1350px) {
+    &__menu__top {
+      display: none;
+      border-bottom: 1px solid #aaa4;
+      padding-bottom: 10px;
+    }
+
+    &__menu__bottom {
+      display: flex;
+      align-items: center;
+      padding-top: 0;
+      gap: 20px;
+      &-item {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media (max-width: 990px) {
+    &__menu__bottom {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: -100%;
+      top: 70px;
+      background-color: #fff;
+      width: 100%;
+      height: 50vh;
+      gap: 10px;
+      transition: 0.4s;
+      z-index: 5;
+      &-item {
+        line-height: 30px;
+        font-size: 18px;
+      }
+    }
+    &__logo__bottom-menu {
+      display: block;
+    }
+
+    &__menu__botttom-hide {
+      top: 70px;
+      left: 0;
+    }
+    &__menu__bottom-btn {
+      display: block;
     }
   }
 }

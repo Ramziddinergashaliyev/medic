@@ -1,0 +1,111 @@
+.feedback {
+  &__title {
+    font-family: Clear Sans;
+    font-size: 39px;
+    font-weight: 700;
+    line-height: 40.05px;
+    text-align: left;
+    color: rgba(0, 127, 0, 1);
+    padding: 15px 0px;
+  }
+
+  &__cards {
+    background-color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 8px;
+  }
+
+  &__card {
+    border: 1px solid #aaa3;
+    padding: 20px;
+    border-radius: 10px;
+    &-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding-bottom: 10px;
+    }
+
+    &-top-about {
+      h4 {
+        font-family: Lato;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 20.96px;
+        text-align: left;
+      }
+      span {
+        font-family: Lato;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20.96px;
+        text-align: left;
+      }
+    }
+
+    &-top-star {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      svg {
+        color: orangered;
+      }
+    }
+
+    &-title {
+      font-family: Clear Sans;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24.34px;
+      text-align: left;
+      color: rgba(34, 34, 34, 1);
+    }
+  }
+
+  @media (max-width: 700px) {
+    &__cards {
+      background-color: white;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border-radius: 8px;
+    }
+
+    &__card {
+      padding: 10px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__card-top-about {
+      h4 {
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+
+    &__card-top-star {
+      gap: 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        font-size: 12px;
+      }
+    }
+
+    &__card-title {
+      font-size: 15px;
+      line-height: 20px;
+      display: -webkit-box;
+      line-clamp: 5;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 5;
+      overflow: hidden;
+    }
+  }
+}

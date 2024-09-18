@@ -1,0 +1,126 @@
+.detail {
+  background-color: white;
+  margin-top: 20px !important;
+  padding: 20px;
+  border-radius: 10px;
+  &__card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+
+    &__left {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      grid-gap: 10px;
+
+      &-imgs {
+        img {
+          width: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    &__left-small {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      img {
+        border-radius: 10px;
+        overflow: hidden;
+        width: 100%;
+        height: 140px;
+        background-color: #aaa4;
+      }
+    }
+
+    &__star {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 10px 0px;
+      svg {
+        font-size: 20px;
+        color: orangered;
+      }
+
+      span {
+        color: green;
+      }
+    }
+
+    &__btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      &__cart {
+        width: 100px;
+        padding: 9px;
+        border: 1px solid orangered;
+        color: orangered;
+        background-color: white;
+        border-radius: 4px;
+        font-size: 15px;
+      }
+    }
+
+    &__btn-counter {
+      border-radius: 4px;
+      overflow: hidden;
+      button {
+        padding: 9px 10px;
+        width: 50px;
+        font-size: 16px;
+        background-color: orangered;
+        border: 1px solid orangered;
+        color: white;
+      }
+    }
+
+    &__right {
+      &-title {
+        font-size: 39px;
+        font-weight: 700;
+        line-height: 40.05px;
+        text-align: left;
+      }
+
+      &-desc {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 20.05px;
+        text-align: left;
+        padding: 10px 0px;
+      }
+    }
+  }
+
+  &__card__icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  &__card__icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 10px;
+    background-color: #aaa3;
+    border-radius: 8px;
+    border: 1px solid #aaa6;
+  }
+
+  &__card__title-product {
+    padding-top: 20px;
+    font-family: Clear Sans;
+    font-size: 39px;
+    font-weight: 700;
+    line-height: 40.05px;
+    text-align: center;
+    color: rgba(0, 127, 0, 1);
+  }
+}
