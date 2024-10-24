@@ -1,0 +1,60 @@
+.categoryManage {
+  padding: 20px;
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    button {
+      padding: 10px;
+      background-color: black;
+      color: white;
+      width: 110px;
+      border: none;
+      border-radius: 6px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #aaa3;
+      outline: none;
+    }
+  }
+
+  &__card {
+    box-shadow: 1px 1px 10px #aaa4;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: white;
+
+    h4 {
+      font-size: 22px;
+      font-weight: 300;
+    }
+    &-btns {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 20px 0px;
+      button {
+        border: none;
+        background-color: transparent;
+        svg {
+          font-size: 28px;
+        }
+      }
+    }
+    &-edit {
+      color: blue !important;
+    }
+  }
+}

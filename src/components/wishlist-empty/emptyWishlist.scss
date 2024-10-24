@@ -1,0 +1,24 @@
+.empty {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: calc(100vh - 300px);
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 250px;
+  }
+  button {
+    width: 120px;
+    padding: 10px;
+    border-radius: 6px;
+    background: linear-gradient(270deg, #2fa365 0%, #15545c 100%);
+    color: white;
+    border: 1px solid green;
+    transition: 0.4s;
+  }
+  button:hover {
+    background: white;
+    color: green;
+  }
+}

@@ -1,5 +1,17 @@
 import React, { lazy } from "react";
 import { Routes, Route, Router } from "react-router-dom";
+import Cart from "./pages/cart/Cart";
+// import Admin from "./pages/admin/Admin";
+// import Profile from "./pages/admin/profile/Profile";
+// const ManageProduct = lazy(() =>
+//   import("./pages/admin/manageProduct/ManageProduct")
+// );
+// const CreateCategory = lazy(() => import("./pages/wishlist/Wishlist"));
+// const ManageCategory = lazy(() => import("./pages/admin/manageCategory"));
+// const CreateProduct = lazy(() =>
+//   import("./pages/admin/createProduct/CreateProduct")
+// );
+const Wishlist = lazy(() => import("./pages/wishlist/Wishlist"));
 const Home = lazy(() => import("./pages/home/Home"));
 const Catolog = lazy(() => import("./pages/catolog/Catolog"));
 const Warranty = lazy(() => import("./pages/warranty/Warranty"));
@@ -25,6 +37,15 @@ const App = () => {
           <Route path="about" element={<About />} />
           <Route path="article" element={<Article />} />
           <Route path="/single/:id" element={<Detail />} />
+          <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/cart" element={<Cart />} />
+          {/* <Route path="admin" element={<Admin />}>
+            <Route path="profile" element={<Profile />} />
+            <Route path="manageProduct" element={<ManageProduct />} />
+            <Route path="createProduct" element={<CreateProduct />} />
+            <Route path="manageCategory" element={<ManageCategory />} />
+            <Route path="createCategory" element={<CreateCategory />} />
+          </Route> */}
         </Route>
       </Routes>
     </>

@@ -1,0 +1,142 @@
+.cart {
+  &__title {
+    font-family: Clear Sans;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 40.05px;
+    text-align: left;
+    color: rgba(0, 127, 0, 1);
+    padding: 20px 0px;
+  }
+
+  &__product-title {
+    font-family: Clear Sans;
+    font-size: 39px;
+    font-weight: 700;
+    line-height: 40.05px;
+    text-align: center;
+    color: rgba(0, 127, 0, 1);
+    padding-top: 20px;
+  }
+
+  &__boxs {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+
+    &__title {
+      font-family: Clear Sans;
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 40.56px;
+      text-align: left;
+      span {
+        color: green;
+      }
+    }
+
+    &__desc {
+      font-family: Clear Sans;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 27.34px;
+      text-align: left;
+      color: rgba(0, 0, 0, 1);
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: 0.7fr 1fr 0.5fr 0.5fr 1fr 0.5fr;
+      padding: 40px 0px;
+      gap: 40px;
+      li {
+        font-family: Clear Sans;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 18.93px;
+      }
+    }
+
+    .cart__boxs__item-end {
+      text-align: center;
+    }
+    &__cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      &-item-btn {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        border: 0.5px solid green !important;
+        height: 45px;
+        button {
+          display: block;
+          width: 100%;
+          height: 45px;
+          border: none;
+          border: 0.5px solid green;
+          background-color: transparent;
+          font-size: 20px;
+        }
+      }
+
+      &-item {
+        h3 {
+          font-family: Clear Sans;
+          font-size: 23px;
+          font-weight: 500;
+          line-height: 25.88px;
+          text-align: left;
+          color: rgba(34, 34, 34, 1);
+        }
+        &-price {
+          font-family: Clear Sans;
+          font-size: 30px;
+          font-weight: 400;
+          line-height: 40.56px;
+          color: rgba(34, 34, 34, 1);
+          &-end {
+            text-align: center;
+          }
+        }
+        &-delete {
+          button {
+            border: 1px solid green;
+            width: 40px;
+            border-radius: 50%;
+            height: 40px;
+            background-color: transparent;
+            font-size: 20px;
+            font-weight: 700;
+            color: green;
+            transition: 0.4s;
+          }
+          button:hover {
+            color: white;
+            background-color: green;
+          }
+        }
+      }
+    }
+
+    &__cards-list {
+      display: grid;
+      grid-template-columns: 0.7fr 1fr 0.5fr 0.5fr 1fr 0.5fr;
+      grid-gap: 40px;
+    }
+
+    .cart__boxs__cards-item-img {
+      background-color: #fff;
+      border: 1px solid #aaa6;
+      border-radius: 10px;
+      padding: 20px;
+      img {
+        width: 100%;
+        height: 130px;
+        object-fit: cover;
+      }
+    }
+  }
+}

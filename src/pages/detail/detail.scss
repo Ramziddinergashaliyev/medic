@@ -99,6 +99,7 @@
   &__card__icons {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
     justify-content: space-between;
     margin-top: 20px;
@@ -122,5 +123,67 @@
     line-height: 40.05px;
     text-align: center;
     color: rgba(0, 127, 0, 1);
+  }
+
+  @media (max-width: 1050px) {
+    &__card {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 20px;
+    }
+  }
+  @media (max-width: 750px) {
+    &__card__left {
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+
+      &-imgs {
+        order: 1;
+        img {
+          width: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+      }
+    }
+    &__card__left-small {
+      width: 100%;
+      overflow-x: scroll;
+      order: 2;
+      display: flex;
+      flex-direction: row;
+      img {
+        min-width: 120px;
+        height: 110px;
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
+    padding: 5px;
+    &__card__right-title {
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    &__card__right-desc {
+      font-size: 16px;
+    }
+
+    &__card__icon {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 400px) {
+    &__card__btn-counter {
+      button {
+        padding: 6px;
+        width: 30px;
+      }
+    }
+    &__card__btn__cart {
+      padding: 6px;
+    }
   }
 }

@@ -20,7 +20,9 @@ const Header = () => {
       <header className="header">
         <nav className="header__nav container">
           <div className="header__logo__top">
-            <img src={img} alt="" />
+            <NavLink to={"/"}>
+              <img src={img} alt="" />
+            </NavLink>
           </div>
           <div className="header__menu">
             <ul className="header__menu__top">
@@ -46,34 +48,68 @@ const Header = () => {
                 show ? "header__menu__botttom-hide" : ""
               }`}
             >
-              <NavLink to={"/catolog"} className="header__menu__bottom-item">
+              <NavLink
+                onClick={() => setShow(false)}
+                to={"/catolog"}
+                className="header__menu__bottom-item"
+              >
                 Каталог
               </NavLink>
-              <NavLink to={"/warranty"} className="header__menu__bottom-item">
+              <NavLink
+                onClick={() => setShow(false)}
+                to={"/warranty"}
+                className="header__menu__bottom-item"
+              >
                 Гарантия
               </NavLink>
-              <NavLink to={"/"} className="header__menu__bottom-item">
-                Оплата и доставка
+              <NavLink
+                onClick={() => setShow(false)}
+                to={"/wishlist"}
+                className="header__menu__bottom-item"
+              >
+                Избранное
               </NavLink>
-              <NavLink to={"/feedback"} className="header__menu__bottom-item">
+              <NavLink
+                onClick={() => setShow(false)}
+                to={"/feedback"}
+                className="header__menu__bottom-item"
+              >
                 Отзывы
               </NavLink>
-              <NavLink to={"/sale"} className="header__menu__bottom-item">
+              <NavLink
+                onClick={() => setShow(false)}
+                to={"/sale"}
+                className="header__menu__bottom-item"
+              >
                 Акции 2
               </NavLink>
-              <NavLink to={"/article"} className="header__menu__bottom-item">
+              <NavLink
+                onClick={() => setShow(false)}
+                to={"/article"}
+                className="header__menu__bottom-item"
+              >
                 статьи
               </NavLink>
-              <NavLink to={"/about"} className="header__menu__bottom-item">
+              <NavLink
+                onClick={() => setShow(false)}
+                to={"/about"}
+                className="header__menu__bottom-item"
+              >
                 О нас{" "}
               </NavLink>
-              <NavLink to={"/contact"} className="header__menu__bottom-item">
+              <NavLink
+                onClick={() => setShow(false)}
+                to={"/contact"}
+                className="header__menu__bottom-item"
+              >
                 Контакты
               </NavLink>
             </ul>
           </div>
           <div className="header__logo__bottom">
-            <FaShoppingBasket />
+            <NavLink to={"/cart"}>
+              <FaShoppingBasket />
+            </NavLink>
             {show ? (
               <button
                 onClick={() => setShow(false)}

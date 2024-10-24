@@ -7,12 +7,41 @@
     grid-gap: 20px;
   }
 
+  &__card__btn {
+    position: absolute;
+    top: -40px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.4s;
+    button {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      border: none;
+      background-color: #aaa2;
+      border: 1px solid #aaa5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    svg {
+      font-size: 22px;
+    }
+  }
+
   &__card {
     background-color: white;
     border: 1px solid #aaa9;
     box-shadow: 1px 1px 10px #aaa7;
+    overflow: hidden;
 
     &__img {
+      position: relative;
+      top: 0;
+      left: 0;
       img {
         height: 300px;
         object-fit: cover;
@@ -61,5 +90,8 @@
         color: white;
       }
     }
+  }
+  &__card:hover &__card__btn {
+    top: 10px;
   }
 }
